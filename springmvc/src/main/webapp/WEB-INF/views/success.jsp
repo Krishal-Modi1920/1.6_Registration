@@ -11,6 +11,7 @@
     <h1>${Header }</h1>
     <h1>${Desc }</h1>
     <hr>
+    <h1 style="color : green">${msg }</h1>
     <h1>Email ${user.email }</h1>
     <h1>Welcome, ${user.userName }</h1>  <!-- Corrected property name -->
     <h1>Password ${user.password } </h1>

@@ -32,11 +32,11 @@ public class ContactController {
     @RequestMapping(path = "/processform", method = RequestMethod.POST)
     public String handleForm(@ModelAttribute User user, Model model) {
         System.out.println("Processing form: " + user);
-
+        
         // Save the user to the database
-        int id = userService.createUser(user);
-        model.addAttribute("message", "User registered successfully with ID: " + id);
-
+        int createdUser = userService.createUser(user);
+        model.addAttribute("message", "User registered successfully with ID: " + createdUser);
+        model.addAttribute("msg", "User created with id " + createdUser);
         return "success"; // Ensure this JSP exists in /WEB-INF/views/
     }
 }
